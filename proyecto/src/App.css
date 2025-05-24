@@ -1,0 +1,164 @@
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+/* Estilos para tarjetas */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilos para la página de login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
+}
+
+.login-card {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.login-title {
+  color: #0d6efd;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos para modales */
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Estilos para la barra de navegación */
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 15px;
+  text-align: center;
+  background-color: #212529;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+  
+  .sidebar.show {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0 !important;
+  }
+  
+  .toggle-sidebar {
+    display: block !important;
+  }
+}
+
+.toggle-sidebar {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Utilidades */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
